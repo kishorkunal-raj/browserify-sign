@@ -11,6 +11,22 @@ matrix:
   include:
     - node_js: "12"
       env: TEST_SUITE=lint
+    - node_js: "8"
+      arch: ppc64le
+    - node_js: "10"
+      arch: ppc64le
+    - node_js: "12"
+      arch: ppc64le
+    - node_js: "14"
+      arch: ppc64le
+    - node_js: "lts/*"
+      arch: ppc64le
+    - node_js: current
+      arch: ppc64le
+    - node_js: "12"
+      env: TEST_SUITE=lint
+      arch: ppc64le
+
 env:
   - TEST_SUITE=unit
 script: npm run-script $TEST_SUITE
